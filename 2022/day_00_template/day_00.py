@@ -2,29 +2,22 @@
 Day 00
 
 """
-from logger import logger
+from common_modules import logger
+from common_modules import arguments
+from common_modules import puzzles
 
 
 def main() -> None:
     """
-    Import the puzzle input, process and display the results.
-
+    Call common modules to carry out routine tasks.
+    Then call solution functions.
     """
-    puzzle_input = import_list()
-    logger.debug(puzzle_input)
+    # Set up common modules
+    args = arguments.get_arguments()
+    logs = logger.initiate_logging(args.level)
 
-
-def import_list() -> list:
-    """
-    Import the puzzle input and return a list.
-
-    :return: Puzzle input text file as list
-    :rtype: list
-    """
-    file = open("puzzle-input", "r")
-    string_list = file.read().splitlines()
-    file.close()
-    return string_list
+    puzzle_input = puzzles.import_puzzle(2022, 1)
+    logs.debug(puzzle_input)
 
 
 if __name__ == "__main__":

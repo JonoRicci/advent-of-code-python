@@ -4,13 +4,15 @@ Get Advent of Code Puzzle Input.
 
 # !/usr/bin/python3
 import argparse
+import os
 import subprocess
 
 # Find SESSION via Firefox:
 # 1. Navigate to https://adventofcode.com/2022/day/1/input
 # 2. From Developer tools navigate to Network
 # 3. Grab the "session" cookie.
-SESSION: str = ""
+# 4. Export as environment variable
+SESSION: str = os.getenv("AOC_SESSION", "")
 
 
 def main() -> None:
@@ -19,17 +21,16 @@ def main() -> None:
     """
     arguments: argparse.Namespace = get_arguments()
     puzzle_input = get_puzzle_input(arguments)
-    print_file(arguments, puzzle_input)
+    write_file(puzzle_input)
 
 
-def print_file(arguments: argparse.Namespace, puzzle_input: str) -> None:
+def write_file(puzzle_input: str) -> None:
     """
-    Take the output and write it to a file.
+    Take the puzzle input and write it to a file.
 
-    :param arguments: Command line arguments
     :param puzzle_input: Puzzle input from advent of code
     """
-    with open(f"day-{arguments.day}-puzzle-input.txt", "w") as file:
+    with open("puzzle-input.txt", "w") as file:
         file.write(puzzle_input)
 
 
