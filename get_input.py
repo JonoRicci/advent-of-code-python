@@ -15,25 +15,25 @@ SESSION: str = ""
 
 def main() -> None:
     """
-    x
+    Gather command line arguments, request puzzle input and print to file.
     """
     arguments: argparse.Namespace = get_arguments()
-    output = get_output(arguments)
-    put_output(arguments, output)
+    puzzle_input = get_puzzle_input(arguments)
+    print_file(arguments, puzzle_input)
 
 
-def put_output(arguments: argparse.Namespace, output: str) -> None:
+def print_file(arguments: argparse.Namespace, puzzle_input: str) -> None:
     """
     Take the output and write it to a file.
 
     :param arguments: Command line arguments
-    :param output: Puzzle input from advent of code
+    :param puzzle_input: Puzzle input from advent of code
     """
     with open(f"day-{arguments.day}-puzzle-input.txt", "w") as file:
-        file.write(output)
+        file.write(puzzle_input)
 
 
-def get_output(arguments: argparse.Namespace) -> str:
+def get_puzzle_input(arguments: argparse.Namespace) -> str:
     """
     Creates command using the passed in arguments, calls it via subprocess module and returns the output.
 
@@ -42,9 +42,9 @@ def get_output(arguments: argparse.Namespace) -> str:
     :rtype: str
     """
     command = f'curl https://adventofcode.com/{arguments.year}/day/{arguments.day}/input --cookie "session={SESSION}"'
-    output = subprocess.check_output(command, shell=True)
-    output = output.decode("utf-8")
-    return output
+    puzzle_input = subprocess.check_output(command, shell=True)
+    puzzle_input = puzzle_input.decode("utf-8")
+    return puzzle_input
 
 
 def get_arguments() -> argparse.Namespace:
