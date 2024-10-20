@@ -9,6 +9,8 @@
 - [Usage](#usage)
   - [Running a solution](#running-a-solution)
   - [Logging](#logging)
+  - [Clean up](#clean-up)
+  - [Make new solution skeleton](#make-new-solution-skeleton)
 
 ## Usage
 
@@ -52,4 +54,24 @@ DEBUG
 INFO
 WARN
 ERROR
+```
+
+### Clean up
+
+If for any reason you need to remove the virtual environment and start again, you can run the following:
+
+```shell
+$ pwd
+/advent-of-code-python/2015
+$ make clean
+```
+
+### Make new solution skeleton
+
+When starting a new problem, you can run the following command to set up the subdirectory and create a skeleton solution file:
+
+```shell
+$ pwd
+/advent-of-code-python/2015
+$ make newday DAY=3
 ```

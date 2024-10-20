@@ -67,3 +67,20 @@ clean:
 .PHONY: setup
 setup: init
 	@echo "✅ Development environment ready to go!"
+
+# Create a new day directory based on the template
+.PHONY: newday
+newday:
+	@if [ -z "$(DAY)" ]; then \
+		echo "❌ Please provide the DAY argument. Usage: make newday DAY=<day_number>"; \
+		exit 1; \
+	fi; \
+	DAY_DIR="day_$(DAY)"; \
+	if [ -d "day_00_template" ]; then \
+		echo "⚙️ Creating new directory for day $(DAY)."; \
+		cp -r day_00_template $$DAY_DIR; \
+		echo "✅ Created new day directory: $$DAY_DIR"; \
+	else \
+		echo "❌ day_00_template directory not found."; \
+		exit 1; \
+	fi
