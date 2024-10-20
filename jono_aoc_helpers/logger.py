@@ -21,6 +21,7 @@ def initiate_logging(level: str = 'INFO') -> logging.Logger:
     handler.setFormatter(log_format)
 
     logger = logging.getLogger()
+    logger.setLevel(level)
     logger.addHandler(handler)
 
     return logger
