@@ -7,6 +7,7 @@ import argparse
 import logging
 import os
 import subprocess
+from .helper_logger import helper_logger
 
 # Find SESSION via Firefox:
 # 1. Navigate to https://adventofcode.com/2022/day/1/input
@@ -16,18 +17,17 @@ import subprocess
 SESSION: str = os.getenv("AOC_SESSION", "")
 
 
-def get_puzzle_input(year: int, day: int, logger: "logging.Logger") -> None:
+def get_puzzle_input(year: int, day: int) -> None:
     """
     Get puzzle input for the specified year and day, and write it to a file. If the file already exists, do not request the input again to avoid unnecessary requests.
 
     :param year: Year of the puzzle
     :param day: Day of the puzzle
-    :param logger: Logger for logging debug and error messages
     """
 
     # Check if SESSION token is present
     if not SESSION:
-        logger.error(
+        helper_logger.error(
             "SESSION environment variable is empty. Please set it by exporting your Advent of Code session cookie as an environment variable: export AOC_SESSION=<your_session_cookie>. You can get the cookie by inspecting cookies from the browser while on the Advent of Code website puzzle input page."
         )
         return
@@ -42,7 +42,7 @@ def get_puzzle_input(year: int, day: int, logger: "logging.Logger") -> None:
 
     # Check if the input file already exists
     if os.path.exists(file_name):
-        logger.debug(f"Input for {year}, {day} already exists: {file_name}")
+        helper_logger.debug(f"Input for {year}, {day} already exists: {file_name}")
         return
 
     # Create command to fetch the puzzle input
@@ -56,7 +56,7 @@ def get_puzzle_input(year: int, day: int, logger: "logging.Logger") -> None:
         puzzle_input = subprocess.check_output(command)
         puzzle_input = puzzle_input.decode("utf-8")
     except subprocess.CalledProcessError as e:
-        logger.error(f"Failed to fetch input: {e}")
+        helper_logger.error(f"Failed to fetch input: {e}")
         return
 
     # Ensure the directory for the day exists
@@ -65,6 +65,6 @@ def get_puzzle_input(year: int, day: int, logger: "logging.Logger") -> None:
     # Write puzzle input to a file
     with open(file_name, "w") as file:
         file.write(puzzle_input)
-        logger.debug(
+        helper_logger.debug(
             f"Puzzle input for year {year}, day {day} has been written to {file_name}"
         )

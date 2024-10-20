@@ -1,5 +1,5 @@
 """
-Logging module for Jono's Advent Of Code.
+Logging module for Jono's Advent of Code.
 Designed to set up console logging for solutions.
 """
 
