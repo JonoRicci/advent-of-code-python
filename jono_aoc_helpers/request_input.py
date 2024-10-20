@@ -25,8 +25,20 @@ def get_puzzle_input(year: int, day: int, logger: "logging.Logger") -> None:
     :param logger: Logger for logging debug and error messages
     """
 
+    # Check if SESSION token is present
+    if not SESSION:
+        logger.error(
+            "SESSION environment variable is empty. Please set it by exporting your Advent of Code session cookie as an environment variable: export AOC_SESSION=<your_session_cookie>. You can get the cookie by inspecting cookies from the browser while on the Advent of Code website puzzle input page."
+        )
+        return
+
     # Define the file path relative to the root directory of the year folder
-    file_name = os.path.join(os.path.dirname(os.path.dirname(__file__)), str(year), f"day_{day}", "puzzle-input")
+    file_name = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)),
+        str(year),
+        f"day_{day}",
+        "puzzle-input",
+    )
 
     # Check if the input file already exists
     if os.path.exists(file_name):
