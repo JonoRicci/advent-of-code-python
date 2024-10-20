@@ -14,6 +14,7 @@ from jono_aoc_helpers.request_input import get_puzzle_input
 from jono_aoc_helpers.timing import timed
 from jono_aoc_helpers import load_input
 
+
 def main() -> None:
     """
     Call helpers to carry out routine tasks.
@@ -27,25 +28,25 @@ def main() -> None:
     get_puzzle_input(2015, 1)
 
     # Load the puzzle input via the helper module
-    instructions = load_input.load_puzzle_input_as_string(2015, 1)
+    puzzle_input = load_input.load_puzzle_input_as_string(2015, 1)
 
     # Calculate results and log it
-    part_1 = part_1(instructions)
-    logger.info(f"Part 1: Santa ends up on floor: {part_1}")
-    part_2 = part_2(instructions)
-    logger.info(f"Part 2: Santa enters the basement at position: {part_2}")
+    part_1_result = part_1(puzzle_input)
+    logger.info(f"Part 1: Santa ends up on floor: {part_1_result}")
+    part_2_result = part_2(puzzle_input)
+    logger.info(f"Part 2: Santa enters the basement at position: {part_2_result}")
 
 
 @timed()
-def part_1(instructions: str) -> int:
+def part_1(puzzle_input: str) -> int:
     """
-    Calculate the resulting floor based on the given instructions.
+    Calculate the resulting floor based on the given puzzle_input.
 
-    :param instructions: String containing the sequence of parentheses
+    :param puzzle_input: String containing the sequence of parentheses
     :return: The floor number that Santa ends up on
     """
     floor = 0
-    for char in instructions:
+    for char in puzzle_input:
         if char == "(":
             floor += 1
         elif char == ")":
@@ -54,15 +55,15 @@ def part_1(instructions: str) -> int:
 
 
 @timed()
-def part_2(instructions: str) -> int:
+def part_2(puzzle_input: str) -> int:
     """
     Find the position of the first character that causes Santa to enter the basement floor (floor -1).
 
-    :param instructions: String containing the sequence of parentheses
+    :param puzzle_input: String containing the sequence of parentheses
     :return: The position of the character that causes Santa to first enter the basement
     """
     floor = 0
-    for index, char in enumerate(instructions, start=1):
+    for index, char in enumerate(puzzle_input, start=1):
         if char == "(":
             floor += 1
         elif char == ")":

@@ -8,8 +8,11 @@ import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
-from jono_aoc_helpers import logger
-from jono_aoc_helpers import arguments
+from jono_aoc_helpers.logger import initiate_logging
+from jono_aoc_helpers.arguments import get_arguments
+from jono_aoc_helpers.request_input import get_puzzle_input
+from jono_aoc_helpers.timing import timed
+from jono_aoc_helpers import load_input
 
 
 def main() -> None:
@@ -18,11 +21,30 @@ def main() -> None:
     Then call solution functions.
     """
     # Set up helpers
-    args = arguments.get_arguments()
-    logs = logger.initiate_logging(args.level)
+    args = get_arguments()
+    logs = initiate_logging(args.level)
 
     # Request input from AoC via curl
-    request_input.get_puzzle_input(2015, 00)
+    get_puzzle_input(2015, 00)
+
+    # Load puzzle input via the helper module
+    puzzle_input =
+
+    # Calculate results and log it
+    part_1_result = part_1(puzzle_input)
+    logger.info(f"Part 1: {part_1_result}")
+    part_2_result = part_2(puzzle_input)
+    logger.info(f"Part 2: {part_2_result}")
+
+
+@timed()
+def part_1():
+    pass
+
+
+@timed()
+def part_2():
+    pass
 
 
 if __name__ == "__main__":
