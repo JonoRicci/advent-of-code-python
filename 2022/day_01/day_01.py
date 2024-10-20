@@ -2,6 +2,7 @@
 Day 01
 
 """
+
 from common_modules import logger
 from common_modules import arguments
 from common_modules import puzzles

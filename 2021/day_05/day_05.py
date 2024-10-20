@@ -2,6 +2,7 @@
 Day 05
 
 """
+
 from collections import defaultdict
 from typing import Tuple
 from logger import logger

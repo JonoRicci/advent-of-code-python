@@ -2,6 +2,7 @@
 Day 06
 
 """
+
 import timeit
 from collections import defaultdict, Counter
 from logger import logger

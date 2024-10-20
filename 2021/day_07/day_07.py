@@ -2,6 +2,7 @@
 Day 07
 
 """
+
 from logger import logger
 
 
