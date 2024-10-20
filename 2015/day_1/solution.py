@@ -10,7 +10,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from jono_aoc_helpers import logger
 from jono_aoc_helpers import arguments
-from jono_aoc_helpers import get_input
+from jono_aoc_helpers import request_input
 
 
 def main() -> None:
@@ -22,8 +22,8 @@ def main() -> None:
     args = arguments.get_arguments()
     logs = logger.initiate_logging(args.level)
 
-    # Get input
-    get_input.get_puzzle_input(2015, 1, logs)
+    # Request input from AoC via curl
+    request_input.get_puzzle_input(2015, 1, logs)
 
 
 if __name__ == "__main__":

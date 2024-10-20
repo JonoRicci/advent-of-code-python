@@ -24,10 +24,9 @@ def get_puzzle_input(year: int, day: int, logger: "logging.Logger") -> None:
     :param day: Day of the puzzle
     :param logger: Logger for logging debug and error messages
     """
-    file_name = f"puzzle-input"
 
-    # Define the file path relative to the current directory
-    file_name = os.path.join(os.path.dirname(__file__), f"day_{day}", "puzzle-input")
+    # Define the file path relative to the root directory of the year folder
+    file_name = os.path.join(os.path.dirname(os.path.dirname(__file__)), str(year), f"day_{day}", "puzzle-input")
 
     # Check if the input file already exists
     if os.path.exists(file_name):

@@ -21,6 +21,9 @@ def main() -> None:
     args = arguments.get_arguments()
     logs = logger.initiate_logging(args.level)
 
+    # Request input from AoC via curl
+    request_input.get_puzzle_input(2015, 00, logs)
+
 
 if __name__ == "__main__":
     main()
