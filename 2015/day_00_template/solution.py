@@ -22,13 +22,12 @@ def main() -> None:
     """
     # Set up helpers
     args = get_arguments()
-    logs = initiate_logging(args.level)
+    logger = initiate_logging(args.level)
 
     # Request input from AoC via curl
     get_puzzle_input(2015, 00)
 
     # Load puzzle input via the helper module
-    puzzle_input =
 
     # Calculate results and log it
     part_1_result = part_1(puzzle_input)
