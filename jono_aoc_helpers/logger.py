@@ -2,11 +2,12 @@
 Logging module for Jono's Advent Of Code.
 Designed to set up console logging for solutions.
 """
+
 import logging
 import sys
 
 
-def initiate_logging(level: str = 'INFO') -> logging.Logger:
+def initiate_logging(level: str = "INFO") -> logging.Logger:
     """
     Initiate a logger instance which can accept a logging level parameter.
 

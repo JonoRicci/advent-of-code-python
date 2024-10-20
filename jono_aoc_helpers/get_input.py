@@ -4,6 +4,7 @@ Get Advent of Code Puzzle Input.
 
 # !/usr/bin/python3
 import argparse
+import logging
 import os
 import subprocess
 
@@ -15,51 +16,44 @@ import subprocess
 SESSION: str = os.getenv("AOC_SESSION", "")
 
 
-def main() -> None:
+def get_puzzle_input(year: int, day: int, logger: "logging.Logger") -> None:
     """
-    Gather command line arguments, request puzzle input and print to file.
-    """
-    arguments: argparse.Namespace = get_arguments()
-    puzzle_input = get_puzzle_input(arguments)
-    write_file(puzzle_input)
+    Get puzzle input for the specified year and day, and write it to a file. If the file already exists, do not request the input again to avoid unnecessary requests.
 
-
-def write_file(puzzle_input: str) -> None:
+    :param year: Year of the puzzle
+    :param day: Day of the puzzle
+    :param logger: Logger for logging debug and error messages
     """
-    Take the puzzle input and write it to a file.
+    file_name = f"puzzle-input"
 
-    :param puzzle_input: Puzzle input from advent of code
-    """
-    with open("puzzle-input.txt", "w") as file:
+    # Define the file path relative to the current directory
+    file_name = os.path.join(os.path.dirname(__file__), f"day_{day}", "puzzle-input")
+
+    # Check if the input file already exists
+    if os.path.exists(file_name):
+        logger.debug(f"Input for {year}, {day} already exists: {file_name}")
+        return
+
+    # Create command to fetch the puzzle input
+    command = [
+        "curl",
+        f"https://adventofcode.com/{year}/day/{day}/input",
+        "--cookie",
+        f"session={SESSION}",
+    ]
+    try:
+        puzzle_input = subprocess.check_output(command)
+        puzzle_input = puzzle_input.decode("utf-8")
+    except subprocess.CalledProcessError as e:
+        logger.error(f"Failed to fetch input: {e}")
+        return
+
+    # Ensure the directory for the day exists
+    os.makedirs(os.path.dirname(file_name), exist_ok=True)
+
+    # Write puzzle input to a file
+    with open(file_name, "w") as file:
         file.write(puzzle_input)
-
-
-def get_puzzle_input(arguments: argparse.Namespace) -> str:
-    """
-    Creates command using the passed in arguments, calls it via subprocess module and returns the output.
-
-    :param arguments: Command line arguments
-    :return output: Puzzle input from advent of code
-    :rtype: str
-    """
-    command = f'curl https://adventofcode.com/{arguments.year}/day/{arguments.day}/input --cookie "session={SESSION}"'
-    puzzle_input = subprocess.check_output(command, shell=True)
-    puzzle_input = puzzle_input.decode("utf-8")
-    return puzzle_input
-
-
-def get_arguments() -> argparse.Namespace:
-    """
-    Grab command line arguments and return.
-
-    :return: Arguments object
-    :rtype: argparse.Namespace
-    """
-    parser = argparse.ArgumentParser(description="Read input")
-    parser.add_argument("--year", type=int, default=2022)
-    parser.add_argument("--day", type=int, default=1)
-    return parser.parse_args()
-
-
-if __name__ == "__main__":
-    main()
+        logger.debug(
+            f"Puzzle input for year {year}, day {day} has been written to {file_name}"
+        )

@@ -2,6 +2,7 @@
 Arguments module for Jono's Advent Of Code.
 Designed to set up debug logging if instructed.
 """
+
 import argparse
 
 
