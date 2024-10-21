@@ -23,6 +23,10 @@ def initiate_logging(level: str = "INFO") -> logging.Logger:
 
     logger = logging.getLogger()
     logger.setLevel(level)
-    logger.addHandler(handler)
+
+    if not logger.hasHandlers():
+        logger.addHandler(handler)
 
     return logger
+
+LoggerType = logging.Logger
