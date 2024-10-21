@@ -3,10 +3,10 @@ Day 1
 
 """
 
-# Add jono_aoc_helpers (local pip module)
 import sys
 import os
 
+# Add jono_aoc_helpers (local pip module)
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from jono_aoc_helpers.logger import initiate_logging
 from jono_aoc_helpers.arguments import get_arguments
