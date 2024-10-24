@@ -1,6 +1,8 @@
 <!-- Centred Header Block -->
 <div align="center">
-  <h1>2015</h1>
+  <a href="https://github.com/jonoricci/advent-of-code-python">
+    <img src="../readme_assets/2015.png" alt="Logo" height="200">
+  </a>
 </div>
 <!-- End of Centred Header Block -->
 

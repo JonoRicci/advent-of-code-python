@@ -1,6 +1,8 @@
 <!-- Centred Header Block -->
 <div align="center">
-  <h1>Jono's Advent Of Code Python Solutions</h1>
+  <a href="https://github.com/jonoricci/advent-of-code-python">
+    <img src="./readme_assets/Title.png" alt="Logo" height="300">
+  </a>
   <p align="center">
     My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a>. Solutions are organised by year and problem.
   </p>
