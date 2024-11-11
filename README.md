@@ -55,7 +55,7 @@ Links to each of my completed solutions.
 
 I record the execution time of each part of a day's solution. You can view these in this separate document here:
 
-- [2015 Solution Execution Times][15times]
+- [⏰ 2015 Solution Execution Times][15times]
 
 ## Setup
 
