@@ -6,6 +6,7 @@ Day 04
 import sys
 import os
 import hashlib
+from itertools import count
 
 # Add jono_aoc_helpers (local pip module)
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
@@ -70,6 +71,13 @@ def part_2(puzzle_input: str) -> int:
         if hash_result.startswith("000000"):
             return number
         number += 1
+
+    # ChatGPT's suggestion for faster execution, turns out to be about the same time.
+    # prefix = puzzle_input.encode()
+    # for number in count():
+    #   hash_result = hashlib.md5(prefix + str(number).encode()).hexdigest()
+    #   if hash_result[:6] == "000000":
+    #       return number
 
 
 if __name__ == "__main__":
