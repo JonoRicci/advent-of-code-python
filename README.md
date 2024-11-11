@@ -12,6 +12,7 @@
 ## Table of Contents <!-- omit in toc -->
 
 - [Solutions](#solutions)
+- [Execution Time](#execution-time)
 - [Setup](#setup)
   - [Requirements](#requirements)
   - [Installation](#installation)
@@ -49,6 +50,12 @@ Links to each of my completed solutions.
 | 22 |  |  |  |  |  |  |  |  |  |  |
 | 23 |  |  |  |  |  |  |  |  |  |  |
 | 24 |  |  |  |  |  |  |  |  |  |  |
+
+## Execution Time
+
+I record the execution time of each part of a day's solution. You can view these in this separate document here:
+
+- [2015 Solution Execution Times][15times]
 
 ## Setup
 
@@ -151,3 +158,5 @@ Please see the [Advent of Code 2024 FAQ][faq].
 [17rdme]: 2017/README.md
 [16rdme]: 2016/README.md
 [15rdme]: 2015/README.md
+
+[15times]: docs/2015.md
