@@ -1,6 +1,12 @@
-# Jono's AoC Helper Module
+# Jono's AoC Helper Module <!-- omit in toc -->
 
 This helper module currently exists as a local module imported intended to be imported by pip. It's not versioned yet, which could be a problem if I update the module when previous years are depending on it.
+
+## Table of Contents <!-- omit in toc -->
+
+- [To Do](#to-do)
+- [Available Functions](#available-functions)
+  - [Command Line Arguments](#command-line-arguments)
 
 ## To Do
 
