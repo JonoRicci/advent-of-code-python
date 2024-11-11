@@ -53,7 +53,7 @@ Links to each of my completed solutions.
 
 ## Execution Time
 
-I record the execution time of each part of a day's solution. You can view these in this separate document here:
+I record the execution time of each part of a day's solution. You can view these below:
 
 - [⏰ 2015 Solution Execution Times][15times]
 
@@ -81,7 +81,7 @@ git clone git@github.com:JonoRicci/advent-of-code-python.git
 
 ## Usage
 
-Each year is treated as a seperate python environment, with it's own configuration, virtual environment, dependencies and python version. This is because I only visit this repo yearly in December, and I don't want to do maintenance on all my previous solutions if I want to upgrade Python for the current year or change something else.
+Each year has its own isolated Python environment with a specific configuration, virtual environment, dependencies, and Python version. I only work on this repository once a year in December, so this setup allows me to upgrade Python or adjust configurations for the current year without needing to update or maintain solutions from previous years.
 
 The year folder is the root directory, and all commands to execute the solutions are intended to be run from the year root directory.
 
@@ -102,6 +102,8 @@ Check the README for each year for specific usage.
 I have library of common functions that I've packaged as a local helper module.
 
 Setup to use this library is included in the yearly README files.
+
+- [🛠️ Jono's AoC Helper Module README][jono_aoc_helper]
 
 ## Puzzle Inputs
 
@@ -160,3 +162,5 @@ Please see the [Advent of Code 2024 FAQ][faq].
 [15rdme]: 2015/README.md
 
 [15times]: docs/Execution%20Times/2015.md
+
+[jono_aoc_helper]: jono_aoc_helpers/README.md
