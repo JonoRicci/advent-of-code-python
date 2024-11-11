@@ -93,7 +93,7 @@ Check the README for each year for specific usage.
 
 ### 🧰 Helper Module
 
-I have library of common Advent of Code functions that I've packaged as a local helper module. It includes such helpers as:
+I have library of common Advent of Code functions that I've packaged as a local helper module `jono_aoc_helpers`. It includes such helpers as:
 
 - ⬇️ Automatic puzzle input retrieval and caching
 - 💾 Writing puzzle input to a file
