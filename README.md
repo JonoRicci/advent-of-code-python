@@ -108,6 +108,8 @@ I have library of common Advent of Code functions that I've packaged as a local 
 - 🛠️ Gathering command line arguments
 - ⏰ Timing function execution time
 
+These are included in the skeleton template files when setting up new day solutions. You can read more below:
+
 - [📖 Jono's AoC Helper Module README][jono_aoc_helper]
 
 ## Puzzle Inputs
