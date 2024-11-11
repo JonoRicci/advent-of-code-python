@@ -5,8 +5,6 @@ This helper module currently exists as a local module imported intended to be im
 ## Table of Contents <!-- omit in toc -->
 
 - [To Do](#to-do)
-- [Available Functions](#available-functions)
-  - [Command Line Arguments](#command-line-arguments)
 
 ## To Do
 
