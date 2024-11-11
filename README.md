@@ -11,16 +11,16 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Solutions](#solutions)
-- [Execution Time](#execution-time)
-- [Setup](#setup)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-- [Usage](#usage)
-  - [Helper Module](#helper-module)
-- [Puzzle Inputs](#puzzle-inputs)
+- [🧩 Solutions](#-solutions)
+- [🛠️ Setup](#️-setup)
+  - [📋 Requirements](#-requirements)
+  - [📥 Installation](#-installation)
+- [🚀 Usage](#-usage)
+  - [🧰 Helper Module](#-helper-module)
+- [⏱️ Execution Time](#️-execution-time)
+- [🔢 Puzzle Inputs](#-puzzle-inputs)
 
-## Solutions
+## 🧩 Solutions
 
 Links to each of my completed solutions.
 
@@ -51,17 +51,11 @@ Links to each of my completed solutions.
 | 23 |  |  |  |  |  |  |  |  |  |  |
 | 24 |  |  |  |  |  |  |  |  |  |  |
 
-## Execution Time
-
-I record the execution time of each part of a day's solution. You can view these below:
-
-- [⏰ 2015 Solution Execution Times][15times]
-
-## Setup
+## 🛠️ Setup
 
 If you are interested in running these solutions locally on your machine following the steps below.
 
-### Requirements
+### 📋 Requirements
 
 Ensure you have access or installed:
 
@@ -71,7 +65,7 @@ Ensure you have access or installed:
 - [Make][make] (to automate tasks via the Makefile)
 - [Git][git] (to clone the repo)
 
-### Installation
+### 📥 Installation
 
 All you need to do is clone the repo.
 
@@ -79,7 +73,7 @@ All you need to do is clone the repo.
 git clone git@github.com:JonoRicci/advent-of-code-python.git
 ```
 
-## Usage
+## 🚀 Usage
 
 Each year has its own isolated Python environment with a specific configuration, virtual environment, dependencies, and Python version. I only work on this repository once a year in December, so this setup allows me to upgrade Python or adjust configurations for the current year without needing to update or maintain solutions from previous years.
 
@@ -97,7 +91,7 @@ Check the README for each year for specific usage.
 - [📖 2016 README][16rdme]
 - [📖 2015 README][15rdme]
 
-### Helper Module
+### 🧰 Helper Module
 
 I have library of common Advent of Code functions that I've packaged as a local helper module. It includes such helpers as:
 
@@ -112,7 +106,13 @@ These are included in the skeleton template files when setting up new day soluti
 
 - [📖 Jono's AoC Helper Module README][jono_aoc_helper]
 
-## Puzzle Inputs
+## ⏱️ Execution Time
+
+I record the execution time of each part of a day's solution. You can view these below:
+
+- [⏰ 2015 Solution Execution Times][15times]
+
+## 🔢 Puzzle Inputs
 
 My puzzle inputs are not included in this repository, they are ignored via my `.gitignore` file. My puzzle answers are included, as they are used in my tests to validate the solution works.
 
