@@ -159,4 +159,4 @@ Please see the [Advent of Code 2024 FAQ][faq].
 [16rdme]: 2016/README.md
 [15rdme]: 2015/README.md
 
-[15times]: docs/2015.md
+[15times]: docs/Execution%20Times/2015.md
