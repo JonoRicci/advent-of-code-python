@@ -7,7 +7,6 @@ import argparse
 import logging
 import os
 import subprocess
-from .helper_logger import helper_logger
 
 # Find SESSION via Firefox:
 # 1. Navigate to https://adventofcode.com/2022/day/1/input
@@ -16,6 +15,7 @@ from .helper_logger import helper_logger
 # 4. Export as environment variable
 SESSION: str = os.getenv("AOC_SESSION", "")
 
+logger = logging.getLogger(__name__)
 
 def get_puzzle_input(year: int, day: int) -> None:
     """
@@ -27,7 +27,7 @@ def get_puzzle_input(year: int, day: int) -> None:
 
     # Check if SESSION token is present
     if not SESSION:
-        helper_logger.error(
+        logger.error(
             "SESSION environment variable is empty. Please set it by exporting your Advent of Code session cookie as an environment variable: export AOC_SESSION=<your_session_cookie>. You can get the cookie by inspecting cookies from the browser while on the Advent of Code website puzzle input page."
         )
         return
@@ -42,7 +42,7 @@ def get_puzzle_input(year: int, day: int) -> None:
 
     # Check if the input file already exists
     if os.path.exists(file_name):
-        helper_logger.debug(f"Input for {year}, {day} already exists: {file_name}")
+        logger.debug(f"Input for {year}, {day} already exists: {file_name}")
         return
 
     # Create command to fetch the puzzle input
@@ -56,7 +56,7 @@ def get_puzzle_input(year: int, day: int) -> None:
         puzzle_input = subprocess.check_output(command)
         puzzle_input = puzzle_input.decode("utf-8")
     except subprocess.CalledProcessError as e:
-        helper_logger.error(f"Failed to fetch input: {e}")
+        logger.error(f"Failed to fetch input: {e}")
         return
 
     # Ensure the directory for the day exists
@@ -65,6 +65,6 @@ def get_puzzle_input(year: int, day: int) -> None:
     # Write puzzle input to a file
     with open(file_name, "w") as file:
         file.write(puzzle_input)
-        helper_logger.debug(
+        logger.debug(
             f"Puzzle input for year {year}, day {day} has been written to {file_name}"
         )

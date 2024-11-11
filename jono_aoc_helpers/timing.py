@@ -2,11 +2,12 @@
 Timing Decorator for measuring execution time of functions.
 """
 
+import logging
 import time
 from functools import wraps
 from typing import Callable
-from .helper_logger import helper_logger
 
+logger = logging.getLogger(__name__)
 
 
 def timed() -> Callable:
@@ -24,7 +25,7 @@ def timed() -> Callable:
             end_time = time.time()
             elapsed_time = end_time - start_time
 
-            helper_logger.info(
+            logger.info(
                 f"Time taken by {func.__name__}: {elapsed_time:.4f} seconds"
             )
             return result
