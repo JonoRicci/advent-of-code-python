@@ -99,11 +99,16 @@ Check the README for each year for specific usage.
 
 ### Helper Module
 
-I have library of common functions that I've packaged as a local helper module.
+I have library of common Advent of Code functions that I've packaged as a local helper module. It includes such helpers as:
 
-Setup to use this library is included in the yearly README files.
+- ⬇️ Automatic puzzle input retrieval and caching
+- 💾 Writing puzzle input to a file
+- 🔍 Loading puzzle input in multiple data types
+- 📖 Initiating logging
+- 🛠️ Gathering command line arguments
+- ⏰ Timing function execution time
 
-- [🛠️ Jono's AoC Helper Module README][jono_aoc_helper]
+- [📖 Jono's AoC Helper Module README][jono_aoc_helper]
 
 ## Puzzle Inputs
 
