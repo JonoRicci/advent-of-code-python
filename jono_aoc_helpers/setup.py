@@ -16,9 +16,6 @@ setup(
     url="https://github.com/jonoricci/advent-of-code-python",
     packages=find_packages(),
     install_requires=[],
-    classifiers=[
-      "Development Status :: 3 - Alpha",
-      "Intended Audience :: Developers"
-    ],
+    classifiers=["Development Status :: 3 - Alpha", "Intended Audience :: Developers"],
     python_requires=">=3.13",
 )

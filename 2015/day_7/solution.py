@@ -34,16 +34,16 @@ def main() -> None:
 
     # Calculate results and log it
     try:
-      part_1_result = part_1(puzzle_input)
-      logger.info(f"Part 1: {part_1_result}")
+        part_1_result = part_1(puzzle_input)
+        logger.info(f"Part 1: {part_1_result}")
     except Exception as e:
         logger.error(f"Error during Part 1: {e}")
 
     try:
-      part_2_result = part_2(puzzle_input)
-      logger.info(f"Part 2: {part_2_result}")
+        part_2_result = part_2(puzzle_input)
+        logger.info(f"Part 2: {part_2_result}")
     except Exception as e:
-      logger.error(f"Error during Part 2: {e}")
+        logger.error(f"Error during Part 2: {e}")
 
 
 @timed()
@@ -59,7 +59,7 @@ def part_1(instructions: list[str]) -> int:
 
     wires = {}
 
-    return evaluate('a', instructions_dict, wires)
+    return evaluate("a", instructions_dict, wires)
 
 
 def parse_instructions(instructions: list[str]) -> dict[str, str]:
@@ -72,7 +72,7 @@ def parse_instructions(instructions: list[str]) -> dict[str, str]:
     instructions_dict = {}
     for line in instructions:
         # Regex captures two groups, expression on the left and value on the right.
-        m = re.match(r'(.+) -> (.+)', line)
+        m = re.match(r"(.+) -> (.+)", line)
         if m:
             instructions_dict[m.group(2)] = m.group(1)
         else:
@@ -117,7 +117,9 @@ def evaluate(wire: str, instructions: dict[str, str], wires: dict[str, int]) -> 
         value = evaluate(a, instructions, wires) >> int(n)
     elif "NOT" in expression:
         _, a = expression.split("NOT ")
-        value = ~evaluate(a, instructions, wires) & 0xFFFF  # 16-bit NOT using bitwise operator
+        value = (
+            ~evaluate(a, instructions, wires) & 0xFFFF
+        )  # 16-bit NOT using bitwise operator
     else:
         value = evaluate(expression, instructions, wires)
 
@@ -139,15 +141,15 @@ def part_2(instructions: list[str]) -> int:
     wires = {}
 
     # Get a value (part 1), should be cached
-    initial_a_value = evaluate('a', instructions_dict, wires)
+    initial_a_value = evaluate("a", instructions_dict, wires)
     logger.info(f"Initial value of wire 'a': {initial_a_value}")
 
     # Override with value of 'b' wire
-    wires = {} # reset cache
-    wires['b'] = initial_a_value
+    wires = {}  # reset cache
+    wires["b"] = initial_a_value
     logger.info(f"Overriding wire 'b' with value: {wires['b']}")
 
-    result = evaluate('a', instructions_dict, wires)
+    result = evaluate("a", instructions_dict, wires)
 
     return result
 

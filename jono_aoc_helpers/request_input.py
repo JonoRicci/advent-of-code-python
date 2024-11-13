@@ -46,7 +46,7 @@ def get_puzzle_input(
         logger.error(
             "SESSION environment variable is empty. Please set it by exporting your Advent of Code session cookie as an environment variable: export AOC_SESSION=<your_session_cookie>. You can get the cookie by inspecting cookies from the browser while on the Advent of Code website puzzle input page."
         )
-        return
+        raise SystemExit("SESSION cookie missing. Ending program.")
 
     # Define the file path relative to the root directory of the year folder
     file_name = os.path.join(

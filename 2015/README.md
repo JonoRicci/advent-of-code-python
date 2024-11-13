@@ -40,13 +40,19 @@ $ python day_00_template/day_00.py
 
 ### Logging
 
-You can select the log level by passing in an argument with `-l` or `--log-level`
+You can select the log level by passing in an argument with `-l` or `--log-level` or by setting an environment variable `AOC_LOG_LEVEL`.
+
+If not specified then the default behaviour is `INFO`.
 
 ```shell
+# Command line argument
 $ pwd
 /advent-of-code-python/2015
 $ python day_00_template/day_00.py -l DEBUG
 $ python day_00_template/day_00.py --log-level DEBUG
+
+# Environment variable
+export AOC_LOG_LEVEL=DEBUG
 ```
 
 The accepted inputs are:
@@ -54,8 +60,9 @@ The accepted inputs are:
 ```none
 DEBUG
 INFO
-WARN
+WARNING
 ERROR
+CRITICAL
 ```
 
 ### Clean up

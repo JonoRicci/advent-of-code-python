@@ -11,17 +11,13 @@ import os
 from typing import Optional
 
 
-def initiate_logging(
-    level: str = "INFO", log_file: Optional[str] = None
-) -> logging.Logger:
+def initiate_logging(level: Optional[str] = None) -> logging.Logger:
     """
     Initiate a logger instance which can accept a logging level parameter.
 
     :param level: Logging level (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    :param log_file: Optional file path to write the logs to
     :return: Logging object
     """
-
     # Use environment variable or default to INFO
     level = level or os.getenv("AOC_LOG_LEVEL", "INFO")
 
@@ -30,32 +26,23 @@ def initiate_logging(
     if not isinstance(numeric_level, int):
         raise ValueError(f"Invalid log level: {level}")
 
-    log_format = logging.Formatter("[%(asctime)s] [%(levelname)s] - %(message)s")
-
-    # Stream handler for console output
-    handler = logging.StreamHandler(sys.stdout)
-    handler.setLevel(numeric_level)
-    handler.setFormatter(log_format)
-
-    # Get a logger with the current module's name
-    logger = logging.getLogger(__name__)
+    # Create or get a named logger to avoid conflicts with root logger
+    logger = logging.getLogger()
     logger.setLevel(numeric_level)
 
-    # Avoid adding duplicate handlers
+    # Ensure no duplicate handlers are added
     if not logger.hasHandlers():
+        # Create a handler and set the formatter
+        handler = logging.StreamHandler(sys.stdout)
+        handler.setLevel(numeric_level)
+        log_format = logging.Formatter("[%(asctime)s] [%(name)s] [%(levelname)s] - %(message)s")
+        handler.setFormatter(log_format)
+
+        # Add the handler to the logger
         logger.addHandler(handler)
-
-    # File handler for writing logs to a file (if log_file is provided)
-    if log_file:
-        file_handler = logging.FileHandler(log_file)
-        file_handler.setLevel(numeric_level)
-        file_handler.setFormatter(log_format)
-        logger.addHandler(file_handler)
-
-    # Prevent log messages from being passed to the root logger multiple times
-    logger.propagate = False
 
     return logger
 
 
+# Alias for logging.Logger to use in type annotations
 LoggerType = logging.Logger

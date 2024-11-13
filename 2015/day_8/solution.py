@@ -1,5 +1,5 @@
 """
-Day 00
+Day 08
 
 """
 
@@ -25,10 +25,10 @@ def main() -> None:
     Then call solution functions.
     """
     # Request input from AoC via curl
-    get_puzzle_input(2015, 0)
+    get_puzzle_input(2015, 8)
 
     # Load puzzle input via the helper module
-    # puzzle_input = load_input.<choose function>(YYYY, D)
+    puzzle_input = load_input.load_puzzle_input_as_list(2015, 8)
 
     # Calculate results and log it
     try:
@@ -45,8 +45,26 @@ def main() -> None:
 
 
 @timed()
-def part_1():
-    pass
+def part_1(puzzle_input: list[str]) -> int:
+    """
+    Calculate the difference between the number of characters in the code
+    representation of the string literals and the number of characters in memory
+    for the values of the strings.
+
+    :param puzzle_input: List of string literals from the input
+    :return: The calculated difference
+    """
+    code_characters = 0
+    memory_characters = 0
+
+    for line in puzzle_input:
+        # Calculate the number of characters in code (including quotes and escape sequences)
+        code_characters += len(line)
+
+        # Decode the string to find the actual number of characters in memory
+        memory_characters += len(eval(line))
+
+    return code_characters - memory_characters
 
 
 @timed()
