@@ -1,9 +1,10 @@
 """
 Jono's Advent of Code Helpers
+-----------------------------
 """
 
-# Set default logging handler for helper module
+# Set up a logger for the module with a NullHandler to avoid "No handler found"
+# warnings.
 import logging
-from logging import NullHandler
 
-logging.getLogger(__name__).addHandler(NullHandler())
+logging.getLogger(__name__).addHandler(logging.NullHandler())
