@@ -1,7 +1,7 @@
 <!-- Centred Header Block -->
 <div align="center">
   <a href="https://github.com/jonoricci/advent-of-code-python">
-    <img src="../readme_assets/2015.png" alt="Logo" height="200">
+    <img src="../docs/readme_assets/2015.png" alt="Logo" height="200">
   </a>
 </div>
 <!-- End of Centred Header Block -->

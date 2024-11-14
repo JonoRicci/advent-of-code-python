@@ -1,10 +1,10 @@
 <!-- Centred Header Block -->
 <div align="center">
   <a href="https://github.com/jonoricci/advent-of-code-python">
-    <img src="./readme_assets/Title.png" alt="Logo" height="300">
+    <img src="./docs/readme_assets/Title.png" alt="Logo" height="300">
   </a>
   <p>
-    <img src="https://img.shields.io/badge/2015-20/50-green" alt="2015: 20/50">
+    <img src="https://img.shields.io/badge/2015-18/50-green" alt="2015: 18/50">
     <img src="https://img.shields.io/badge/2016-0/50-lightgrey" alt="2016: 0/50">
     <img src="https://img.shields.io/badge/2017-0/50-lightgrey" alt="2017: 0/50">
     <img src="https://img.shields.io/badge/2018-0/50-lightgrey" alt="2018: 0/50">
