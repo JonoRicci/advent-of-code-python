@@ -31,7 +31,7 @@
   - [Installation](#installation)
 - [Usage](#usage)
   - [Helper Module](#helper-module)
-- [⏱Execution Time](#execution-time)
+- [Execution Time](#execution-time)
 - [Puzzle Inputs](#puzzle-inputs)
 
 ## Solutions
@@ -120,7 +120,7 @@ These are included in the skeleton template files when setting up new day soluti
 
 - [📖 Jono's AoC Helper Module README][jono_aoc_helper]
 
-## ⏱Execution Time
+## Execution Time
 
 I record the execution time of each part of a day's solution. You can view these below:
 
