@@ -15,26 +15,26 @@
     <img src="https://img.shields.io/badge/2023-0/50-lightgrey" alt="2023: 0/50">
   </p>
   <p align="center">
-    My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a> using <strong>Python</strong>. Solutions are organised by year and day.
+    My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a> using <em>Python</em>. Solutions are organised by year and day.
   </p>
   <p>
-    These solutions are written with a focus on quality, maintainability, and clarity. They are intended to be production ready (from a DevOps perspective) and easy to work with.
+    These solutions prioritise readability, maintainability, and real-world practices over speed of writing or competitive programming techniques. The goal is to craft production ready code, similar to what I'd write in my professional role.
   </p>
 </div>
 <!-- End of Centred Header Block -->
 
 ## Table of Contents <!-- omit in toc -->
 
-- [💡 Solutions](#-solutions)
-- [🛠️ Setup](#️-setup)
-  - [📋 Requirements](#-requirements)
-  - [💾 Installation](#-installation)
-- [🚀 Usage](#-usage)
-  - [🧰 Helper Module](#-helper-module)
-- [⏱️ Execution Time](#️-execution-time)
-- [🔢 Puzzle Inputs](#-puzzle-inputs)
+- [Solutions](#solutions)
+- [Setup](#setup)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Helper Module](#helper-module)
+- [⏱Execution Time](#execution-time)
+- [Puzzle Inputs](#puzzle-inputs)
 
-## 💡 Solutions
+## Solutions
 
 Links to each of my completed solutions.
 
@@ -65,11 +65,11 @@ Links to each of my completed solutions.
 | 23 |  |  |  |  |  |  |  |  |  |  |
 | 24 |  |  |  |  |  |  |  |  |  |  |
 
-## 🛠️ Setup
+## Setup
 
 If you are interested in running these solutions locally on your machine following the steps below.
 
-### 📋 Requirements
+### Requirements
 
 Ensure you have access or installed:
 
@@ -79,7 +79,7 @@ Ensure you have access or installed:
 - [Make][make] (to automate tasks via the Makefile)
 - [Git][git] (to clone the repo)
 
-### 💾 Installation
+### Installation
 
 All you need to do is clone the repo.
 
@@ -87,7 +87,7 @@ All you need to do is clone the repo.
 git clone git@github.com:JonoRicci/advent-of-code-python.git
 ```
 
-## 🚀 Usage
+## Usage
 
 Each year has its own isolated Python environment with a specific configuration, virtual environment, dependencies, and Python version. I only work on this repository once a year in December, so this setup allows me to upgrade Python or adjust configurations for the current year without needing to update or maintain solutions from previous years.
 
@@ -105,7 +105,7 @@ Check the README for each year for specific usage.
 - [📖 2016 README][16rdme]
 - [📖 2015 README][15rdme]
 
-### 🧰 Helper Module
+### Helper Module
 
 I have library of common Advent of Code functions that I've packaged as a local helper module `jono_aoc_helpers`. It includes such helpers as:
 
@@ -120,13 +120,13 @@ These are included in the skeleton template files when setting up new day soluti
 
 - [📖 Jono's AoC Helper Module README][jono_aoc_helper]
 
-## ⏱️ Execution Time
+## ⏱Execution Time
 
 I record the execution time of each part of a day's solution. You can view these below:
 
 - [⏰ 2015 Solution Execution Times][15times]
 
-## 🔢 Puzzle Inputs
+## Puzzle Inputs
 
 My puzzle inputs are not included in this repository, they are ignored via my `.gitignore` file. My puzzle answers are included, as they are used in my tests to validate the solution works.
 
