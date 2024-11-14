@@ -15,23 +15,26 @@
     <img src="https://img.shields.io/badge/2023-0/50-lightgrey" alt="2023: 0/50">
   </p>
   <p align="center">
-    My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a>. Solutions are organised by year and problem.
+    My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a> using <strong>Python</strong>. Solutions are organised by year and day.
+  </p>
+  <p>
+    These solutions are written with a focus on quality, maintainability, and clarity. They are intended to be production ready (from a DevOps perspective) and easy to work with.
   </p>
 </div>
 <!-- End of Centred Header Block -->
 
 ## Table of Contents <!-- omit in toc -->
 
-- [🧩 Solutions](#-solutions)
+- [💡 Solutions](#-solutions)
 - [🛠️ Setup](#️-setup)
   - [📋 Requirements](#-requirements)
-  - [📥 Installation](#-installation)
+  - [💾 Installation](#-installation)
 - [🚀 Usage](#-usage)
   - [🧰 Helper Module](#-helper-module)
 - [⏱️ Execution Time](#️-execution-time)
 - [🔢 Puzzle Inputs](#-puzzle-inputs)
 
-## 🧩 Solutions
+## 💡 Solutions
 
 Links to each of my completed solutions.
 
@@ -76,7 +79,7 @@ Ensure you have access or installed:
 - [Make][make] (to automate tasks via the Makefile)
 - [Git][git] (to clone the repo)
 
-### 📥 Installation
+### 💾 Installation
 
 All you need to do is clone the repo.
 
