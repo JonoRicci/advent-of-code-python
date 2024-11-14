@@ -3,6 +3,17 @@
   <a href="https://github.com/jonoricci/advent-of-code-python">
     <img src="./readme_assets/Title.png" alt="Logo" height="300">
   </a>
+  <p>
+    <img src="https://img.shields.io/badge/2015-20/50-green" alt="2015: 20/50">
+    <img src="https://img.shields.io/badge/2016-0/50-lightgrey" alt="2016: 0/50">
+    <img src="https://img.shields.io/badge/2017-0/50-lightgrey" alt="2017: 0/50">
+    <img src="https://img.shields.io/badge/2018-0/50-lightgrey" alt="2018: 0/50">
+    <img src="https://img.shields.io/badge/2019-0/50-lightgrey" alt="2019: 0/50">
+    <img src="https://img.shields.io/badge/2020-22/50-green" alt="2020: 22/50">
+    <img src="https://img.shields.io/badge/2021-14/50-green" alt="2021: 14/50">
+    <img src="https://img.shields.io/badge/2022-4/50-yellow" alt="2022: 4/50">
+    <img src="https://img.shields.io/badge/2023-0/50-lightgrey" alt="2023: 0/50">
+  </p>
   <p align="center">
     My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a>. Solutions are organised by year and problem.
   </p>
