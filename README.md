@@ -11,9 +11,9 @@
     <img src="https://img.shields.io/badge/2019-0/50-lightgrey" alt="2019: 0/50">
     <img src="https://img.shields.io/badge/2020-22/50-green" alt="2020: 22/50">
     <img src="https://img.shields.io/badge/2021-14/50-green" alt="2021: 14/50">
-    <img src="https://img.shields.io/badge/2022-4/50-yellow" alt="2022: 4/50">
+    <img src="https://img.shields.io/badge/2022-4/50-green" alt="2022: 4/50">
     <img src="https://img.shields.io/badge/2023-0/50-lightgrey" alt="2023: 0/50">
-    <img src="https://img.shields.io/badge/2024-2/50-yellow" alt="2024: 2/50">
+    <img src="https://img.shields.io/badge/2024-6/50-green" alt="2024: 6/50">
   </p>
   <p align="center">
     My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a> using <em>Python</em>. Solutions are organised by year and day.
@@ -143,9 +143,9 @@ Please see the [Advent of Code 2024 FAQ][faq].
 
 <!-- Links -->
 
-[24d01]: 2024/day_01/
-[24d02]: 2024/day_02/
-[24d03]: 2024/day_03/
+[24d01]: 2024/day_1/
+[24d02]: 2024/day_2/
+[24d03]: 2024/day_3/
 
 [22d01]: 2022/day_01/
 [22d02]: 2022/day_02/
