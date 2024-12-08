@@ -13,6 +13,7 @@
     <img src="https://img.shields.io/badge/2021-14/50-green" alt="2021: 14/50">
     <img src="https://img.shields.io/badge/2022-4/50-yellow" alt="2022: 4/50">
     <img src="https://img.shields.io/badge/2023-0/50-lightgrey" alt="2023: 0/50">
+    <img src="https://img.shields.io/badge/2024-2/50-yellow" alt="2024: 2/50">
   </p>
   <p align="center">
     My attempts at the problems from <a href="https://adventofcode.com/">Advent of Code</a> using <em>Python</em>. Solutions are organised by year and day.
@@ -33,6 +34,7 @@
   - [Helper Module](#helper-module)
 - [Execution Time](#execution-time)
 - [Puzzle Inputs](#puzzle-inputs)
+- [Links](#links)
 
 ## Solutions
 
@@ -40,9 +42,9 @@ Links to each of my completed solutions.
 
 | Day | 2024 | 2023 | 2022 | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 | 2015 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 01 |  |  | [⭐⭐][22d01] | [⭐⭐][21d01] | [⭐⭐][20d01] |  |  |  |  | [⭐⭐][15d01] |
-| 02 |  |  | [⭐⭐][22d02] | [⭐⭐][21d02] | [⭐⭐][20d02] |  |  |  |  | [⭐⭐][15d02] |
-| 03 |  |  |  | [⭐⭐][21d03] | [⭐⭐][20d03] |  |  |  |  | [⭐⭐][15d03]  |
+| 01 | [⭐⭐][24d01] |  | [⭐⭐][22d01] | [⭐⭐][21d01] | [⭐⭐][20d01] |  |  |  |  | [⭐⭐][15d01] |
+| 02 | [⭐⭐][24d02] |  | [⭐⭐][22d02] | [⭐⭐][21d02] | [⭐⭐][20d02] |  |  |  |  | [⭐⭐][15d02] |
+| 03 | [⭐⭐][24d03] |  |  | [⭐⭐][21d03] | [⭐⭐][20d03] |  |  |  |  | [⭐⭐][15d03]  |
 | 04 |  |  |  | [⭐⭐][21d04] | [⭐⭐][20d04] |  |  |  |  | [⭐⭐][15d04] |
 | 05 |  |  |  | [⭐⭐][21d05] | [⭐⭐][20d05] |  |  |  |  | [⭐⭐][15d05] |
 | 06 |  |  |  | [⭐⭐][21d06] | [⭐⭐][20d06] |  |  |  |  | [⭐⭐][15d06] |
@@ -95,6 +97,7 @@ The year folder is the root directory, and all commands to execute the solutions
 
 Check the README for each year for specific usage.
 
+- [📖 2024 README][24rdme]
 - [📖 2023 README][23rdme]
 - [📖 2022 README][22rdme]
 - [📖 2021 README][21rdme]
@@ -140,6 +143,10 @@ Please see the [Advent of Code 2024 FAQ][faq].
 
 <!-- Links -->
 
+[24d01]: 2024/day_01/
+[24d02]: 2024/day_02/
+[24d03]: 2024/day_03/
+
 [22d01]: 2022/day_01/
 [22d02]: 2022/day_02/
 
@@ -178,6 +185,7 @@ Please see the [Advent of Code 2024 FAQ][faq].
 [make]: https://www.gnu.org/software/make/
 [git]: https://git-scm.com/
 
+[24rdme]: 2024/README.md
 [23rdme]: 2023/README.md
 [22rdme]: 2022/README.md
 [21rdme]: 2021/README.md
